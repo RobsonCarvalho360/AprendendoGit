@@ -1,0 +1,100 @@
+:root {
+    --primary: #e1d8cf;
+    --secondary: #373741;
+  }
+  html, body {
+    height: 100vh;
+    margin: 0;
+    font-size: 12px;
+  }
+  body {
+    overflow: hidden;
+    display: flex;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  .left-side,
+  .right-side {
+    display: inline-block;
+    height: 100vh;
+  }
+  /*****************************/
+  /******** Left Side **********/
+  /*****************************/
+  .left-side {
+    background: var(--primary);
+    width: 30%;
+    max-width: 180px;
+    min-width: 160px;
+    padding: 15px;
+  }
+  .avatar {
+    height: 130px;
+    border-radius: 50%;
+    margin: 15px auto 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  .info-box {
+    margin: 0 auto;
+    max-width: 300px;
+  }
+  .info-box h2 {
+    background: var(--secondary);
+    color: var(--primary);
+    font-size: 1rem;
+    padding: 6px;
+  }
+  .info-box p {
+    font-size: 1rem;
+    padding: 4px;
+  }
+  /*****************************/
+  /******* Right Side **********/
+  /*****************************/
+  .right-side {
+    width: 100%;
+  }
+  .right-side header {
+    background: var(--secondary);
+    color: var(--primary);
+    height: 150px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .right-side header * {
+    text-align: center;
+    margin: 0;
+  }
+  .right-side header h1 {
+    font-size: 2.5rem;
+  }
+  .right-side header h6 {
+    font-size: 1.2rem;
+  }
+  .right-side .content {
+    height: 100%;
+    overflow: auto;
+  }
+  @media(min-width: 425px) and (max-width: 726px) {
+    html, body {
+      overflow: auto;
+    }
+    body {
+      flex-direction: column-reverse;
+    }
+    .left-side, .right-side {
+      height: auto;
+      width: 100%;
+    }
+    .left-side {
+      max-width: initial;
+    }
+    .avatar{
+      display: none;
+    }
+  }
